@@ -123,13 +123,13 @@
             this.toolStripMenuItemClear});
             this.contextMenuStripClear.Name = "contextMenuStripClear";
             this.contextMenuStripClear.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.contextMenuStripClear.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStripClear.Size = new System.Drawing.Size(122, 26);
             this.contextMenuStripClear.Text = "Clear";
             // 
             // toolStripMenuItemClear
             // 
             this.toolStripMenuItemClear.Name = "toolStripMenuItemClear";
-            this.toolStripMenuItemClear.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemClear.Size = new System.Drawing.Size(121, 22);
             this.toolStripMenuItemClear.Text = "Clear log";
             this.toolStripMenuItemClear.Click += new System.EventHandler(this.toolStripMenuItemClear_Click);
             // 
@@ -685,13 +685,14 @@
             // 
             // comboBoxLanguage
             // 
-            this.comboBoxLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBoxLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxLanguage.FormattingEnabled = true;
             this.comboBoxLanguage.Items.AddRange(new object[] {
             "Choose automatically",
             "English",
-            "Deutsch"});
+            "Deutsch",
+            "中文"});
             this.comboBoxLanguage.Location = new System.Drawing.Point(633, 316);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
             this.comboBoxLanguage.Size = new System.Drawing.Size(152, 21);
@@ -700,6 +701,7 @@
             // 
             // labelLanguage
             // 
+            this.labelLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelLanguage.AutoSize = true;
             this.labelLanguage.Location = new System.Drawing.Point(577, 319);
             this.labelLanguage.Name = "labelLanguage";
@@ -709,6 +711,7 @@
             // 
             // labelRed
             // 
+            this.labelRed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelRed.AutoSize = true;
             this.labelRed.ForeColor = System.Drawing.Color.Red;
             this.labelRed.Location = new System.Drawing.Point(483, 329);
@@ -719,6 +722,7 @@
             // 
             // labelGreen
             // 
+            this.labelGreen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelGreen.AutoSize = true;
             this.labelGreen.ForeColor = System.Drawing.Color.Green;
             this.labelGreen.Location = new System.Drawing.Point(483, 312);
@@ -833,7 +837,8 @@
             "No Lineending",
             "Linefeed",
             "Carriage Return",
-            "CR + LF"});
+            "CR + LF",
+            "中文"});
             this.comboBoxLineending.Location = new System.Drawing.Point(276, 316);
             this.comboBoxLineending.Name = "comboBoxLineending";
             this.comboBoxLineending.Size = new System.Drawing.Size(121, 21);

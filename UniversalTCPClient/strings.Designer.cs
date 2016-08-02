@@ -169,7 +169,7 @@ namespace UniversalTCPClient {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die No Lineending ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die No Line ending ähnelt.
         /// </summary>
         internal static string MainForm_ComboBox_Lineending_NoLineEnding {
             get {
@@ -268,7 +268,7 @@ namespace UniversalTCPClient {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Lineending: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Line ending: ähnelt.
         /// </summary>
         internal static string MainForm_Label_Lineending {
             get {

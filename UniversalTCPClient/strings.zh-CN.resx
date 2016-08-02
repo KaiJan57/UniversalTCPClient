@@ -118,123 +118,123 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MainForm_Title" xml:space="preserve">
-    <value>Universal TCP client</value>
+    <value>通用TCP客户端</value>
   </data>
   <data name="MainForm_GroupBoxIPScan" xml:space="preserve">
-    <value>IP scanner</value>
+    <value>IP 扫描器</value>
   </data>
   <data name="MainForm_Label_MinIP" xml:space="preserve">
-    <value>MinIP:</value>
+    <value>分IP:</value>
   </data>
   <data name="MainForm_Label_MaxIP" xml:space="preserve">
-    <value>MaxIP:</value>
+    <value>最大IP:</value>
   </data>
   <data name="MainForm_Button_ClearList" xml:space="preserve">
-    <value>Clear list</value>
+    <value>明确名单</value>
   </data>
   <data name="MainForm_Button_Connect_Abort" xml:space="preserve">
-    <value>Abort!</value>
+    <value>退出!</value>
   </data>
   <data name="MainForm_Button_Connect_Connect" xml:space="preserve">
-    <value>Connect!</value>
+    <value>链接!</value>
   </data>
   <data name="MainForm_Button_Connect_Disconnect" xml:space="preserve">
-    <value>Disconnect!</value>
+    <value>断开!</value>
   </data>
   <data name="MainForm_Button_Scan" xml:space="preserve">
-    <value>Scan!</value>
+    <value>扫描!</value>
   </data>
   <data name="MainForm_Button_Send" xml:space="preserve">
-    <value>Send!</value>
+    <value>发送!</value>
   </data>
   <data name="MainForm_CheckBox_AutoClear" xml:space="preserve">
-    <value>AutoClear</value>
+    <value>自动明确</value>
   </data>
   <data name="MainForm_CheckBox_AutoScroll" xml:space="preserve">
-    <value>AutoScroll</value>
+    <value>自动滚动</value>
   </data>
   <data name="MainForm_ComboBox_Language_Auto" xml:space="preserve">
-    <value>Choose automatically</value>
+    <value>自动选择</value>
   </data>
   <data name="MainForm_ComboBox_Lineending_CR" xml:space="preserve">
-    <value>Carriage Return</value>
+    <value>回车</value>
   </data>
   <data name="MainForm_ComboBox_Lineending_CRLF" xml:space="preserve">
-    <value>CR + LF</value>
+    <value>回车 + 换行</value>
   </data>
   <data name="MainForm_ComboBox_Lineending_LF" xml:space="preserve">
-    <value>Linefeed</value>
+    <value>换行</value>
   </data>
   <data name="MainForm_ComboBox_Lineending_NoLineEnding" xml:space="preserve">
-    <value>No Line ending</value>
-  </data>
-  <data name="MainForm_GroupBoxClient" xml:space="preserve">
-    <value>Client</value>
+    <value>没有行结束</value>
   </data>
   <data name="MainForm_GroupBoxPortScan" xml:space="preserve">
-    <value>Port scanner</value>
+    <value>端口扫描器</value>
   </data>
   <data name="MainForm_Label_Attempts" xml:space="preserve">
-    <value>Attempts:</value>
+    <value>尝试:</value>
   </data>
   <data name="MainForm_Label_Charset" xml:space="preserve">
-    <value>Charset:</value>
+    <value>字符集:</value>
   </data>
   <data name="MainForm_Label_Color_Receive" xml:space="preserve">
-    <value>Red = Received</value>
+    <value>红 = 收到了</value>
   </data>
   <data name="MainForm_Label_Color_Send" xml:space="preserve">
-    <value>Green = Sent</value>
+    <value>绿 = 发送了</value>
   </data>
   <data name="MainForm_Label_Host" xml:space="preserve">
-    <value>Host:</value>
+    <value>主机:</value>
   </data>
   <data name="MainForm_Label_Language" xml:space="preserve">
-    <value>Language:</value>
+    <value>语言:</value>
   </data>
   <data name="MainForm_Label_Lineending" xml:space="preserve">
-    <value>Line ending:</value>
+    <value>行结束:</value>
   </data>
   <data name="MainForm_Label_MaxPort" xml:space="preserve">
-    <value>MaxPort:</value>
+    <value>最大端口:</value>
   </data>
   <data name="MainForm_Label_MinPort" xml:space="preserve">
-    <value>MinPort:</value>
+    <value>分端口:</value>
   </data>
   <data name="MainForm_Label_Port" xml:space="preserve">
-    <value>Port:</value>
+    <value>端口:</value>
   </data>
   <data name="MainForm_Label_Progress" xml:space="preserve">
-    <value>Progress:</value>
+    <value>进展:</value>
   </data>
   <data name="MainForm_Label_Results" xml:space="preserve">
-    <value>Results:</value>
+    <value>结果:</value>
   </data>
   <data name="MainForm_Label_Timeout" xml:space="preserve">
-    <value>Timeout:</value>
+    <value>暂停:</value>
   </data>
   <data name="MainForm_ObjectListView_Column_HostName" xml:space="preserve">
-    <value>Name</value>
+    <value>名称</value>
   </data>
   <data name="MainForm_ObjectListView_Column_IP" xml:space="preserve">
     <value>IP</value>
   </data>
   <data name="MainForm_ObjectListview_Column_Port" xml:space="preserve">
-    <value>Port</value>
-  </data>
-  <data name="MainForm_ProgressBar_Done" xml:space="preserve">
-    <value>Done!</value>
+    <value>端口</value>
   </data>
   <data name="MessageBox_Error" xml:space="preserve">
-    <value>Error!</value>
+    <value>错误!</value>
   </data>
   <data name="MessageBox_Error_Connect" xml:space="preserve">
-    <value>Error while connecting.</value>
+    <value>连接错误。</value>
   </data>
   <data name="MessageBox_Error_ConnectionLost" xml:space="preserve">
-    <value>Connection lost.</value>
+    <value>失去连接</value>
+  </data>
+  <data name="MainForm_GroupBoxClient" xml:space="preserve">
+    <value>客户端</value>
+  </data>
+  <data name="MainForm_ProgressBar_Done" xml:space="preserve">
+    <value>完成!</value>
   </data>
   <data name="MainForm_ContextMenuStrip_Clear" xml:space="preserve">
-    <value>Clear log</value>
+    <value>清除日志</value>
   </data>
 </root>

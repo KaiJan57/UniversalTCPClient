@@ -93,6 +93,11 @@ namespace UniversalTCPClient
                             UpdateLanguage("de");
                             break;
                         }
+                    case 3:
+                        {
+                            UpdateLanguage("zh-CN");
+                            break;
+                        }
                 }
             }
         }
