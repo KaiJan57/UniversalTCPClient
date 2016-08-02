@@ -150,6 +150,7 @@ namespace UniversalTCPClient
             }
             buttonSend.Text = strings.MainForm_Button_Send;
             checkBoxAutoClear.Text = strings.MainForm_CheckBox_AutoClear;
+            contextMenuStripClear.Items[0].Text = strings.MainForm_ContextMenuStrip_Clear;
             labelCharset.Text = strings.MainForm_Label_Charset;
             labelLineending.Text = strings.MainForm_Label_Lineending;
             comboBoxLineending.Items.Clear();
@@ -277,7 +278,7 @@ namespace UniversalTCPClient
             receiveBuffer.Clear();
             sendBuffer.Clear();
             connectButtonState = ConnectButtonState.WouldAbort;
-            buttonConnect.Text = "Abbrechen!";
+            buttonConnect.Text = strings.MainForm_Button_Connect_Abort;
             disconnecting = false;
             retry:
             try
@@ -383,6 +384,11 @@ namespace UniversalTCPClient
         {
             sendBoxSend.Enabled = enable;
             buttonSend.Enabled = enable;
+        }
+
+        private void toolStripMenuItemClear_Click(object sender, EventArgs e)
+        {
+            richTextBoxLog.Text = "";
         }
         #endregion Actual Client
 

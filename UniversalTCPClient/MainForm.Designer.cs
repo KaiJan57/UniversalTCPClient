@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.contextMenuStripClear = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItemClear = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new UniversalTCPClient.Controls.BetterSplitContainer();
             this.splitContainer2 = new UniversalTCPClient.Controls.BetterSplitContainer();
             this.groupBoxIPScanner = new System.Windows.Forms.GroupBox();
@@ -88,6 +91,7 @@
             this.numericUpDownPortConnect = new System.Windows.Forms.NumericUpDown();
             this.hostTextBoxHostConnect = new UniversalTCPClient.Controls.HostTextBox();
             this.labelHost2 = new System.Windows.Forms.Label();
+            this.contextMenuStripClear.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -112,6 +116,22 @@
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPortConnect)).BeginInit();
             this.SuspendLayout();
+            // 
+            // contextMenuStripClear
+            // 
+            this.contextMenuStripClear.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemClear});
+            this.contextMenuStripClear.Name = "contextMenuStripClear";
+            this.contextMenuStripClear.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.contextMenuStripClear.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStripClear.Text = "Clear";
+            // 
+            // toolStripMenuItemClear
+            // 
+            this.toolStripMenuItemClear.Name = "toolStripMenuItemClear";
+            this.toolStripMenuItemClear.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemClear.Text = "Clear log";
+            this.toolStripMenuItemClear.Click += new System.EventHandler(this.toolStripMenuItemClear_Click);
             // 
             // splitContainer1
             // 
@@ -772,6 +792,7 @@
             // richTextBoxLog
             // 
             this.richTextBoxLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxLog.ContextMenuStrip = this.contextMenuStripClear;
             this.richTextBoxLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBoxLog.Location = new System.Drawing.Point(0, 0);
             this.richTextBoxLog.Name = "richTextBoxLog";
@@ -914,6 +935,7 @@
             this.Name = "MainForm";
             this.Text = "Universal TCP client";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.contextMenuStripClear.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1006,5 +1028,7 @@
         private System.Windows.Forms.Label labelGreen;
         private System.Windows.Forms.ComboBox comboBoxLanguage;
         private System.Windows.Forms.Label labelLanguage;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripClear;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemClear;
     }
 }

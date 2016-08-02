@@ -234,4 +234,7 @@
   <data name="MainForm_ProgressBar_Done" xml:space="preserve">
     <value>Fertig!</value>
   </data>
+  <data name="MainForm_ContextMenuStrip_Clear" xml:space="preserve">
+    <value>Log leeren</value>
+  </data>
 </root>

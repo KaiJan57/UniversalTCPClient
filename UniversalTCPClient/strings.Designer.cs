@@ -178,6 +178,15 @@ namespace UniversalTCPClient {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Clear log ähnelt.
+        /// </summary>
+        internal static string MainForm_ContextMenuStrip_Clear {
+            get {
+                return ResourceManager.GetString("MainForm_ContextMenuStrip_Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Client ähnelt.
         /// </summary>
         internal static string MainForm_GroupBoxClient {

@@ -234,4 +234,7 @@
   <data name="MessageBox_Error_ConnectionLost" xml:space="preserve">
     <value>Connection lost.</value>
   </data>
+  <data name="MainForm_ContextMenuStrip_Clear" xml:space="preserve">
+    <value>Clear log</value>
+  </data>
 </root>
