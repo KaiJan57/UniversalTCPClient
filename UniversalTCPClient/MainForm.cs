@@ -104,6 +104,7 @@ namespace UniversalTCPClient
 
         public void UpdateLanguage(string Lang)
         {
+            SuspendLayout();
             int LineEndingIndex = comboBoxLineending.SelectedIndex;
             int EncodingIndex = comboBoxEncoding.SelectedIndex;
             if (Lang == null || Lang.ToLower() == "auto")
@@ -119,7 +120,7 @@ namespace UniversalTCPClient
             labelMinIP.Text = strings.MainForm_Label_MinIP;
             labelMaxIP.Text = strings.MainForm_Label_MaxIP;
             labelAttempts.Text = strings.MainForm_Label_Attempts;
-            labelTimeout1.Text = labelTimeout2.Text = strings.MainForm_Label_Attempts;
+            labelTimeout1.Text = labelTimeout2.Text = strings.MainForm_Label_Timeout;
             buttonIPScan.Text = ipscan ? strings.MainForm_Button_Connect_Abort : strings.MainForm_Button_Scan;
             buttonClearIP.Text = buttonClearPort.Text = strings.MainForm_Button_ClearList;
             labelProgress1.Text = labelProgress2.Text = strings.MainForm_Label_Progress;
@@ -170,6 +171,7 @@ namespace UniversalTCPClient
             comboBoxLanguage.Items[0] = strings.MainForm_ComboBox_Language_Auto;
             comboBoxLineending.SelectedIndex = LineEndingIndex;
             comboBoxEncoding.SelectedIndex = EncodingIndex;
+            ResumeLayout();
         }
         private void numericUpDown_Enter(object sender, EventArgs e)
         {
@@ -749,6 +751,9 @@ namespace UniversalTCPClient
         #region RichTextBox utils
         private void AddText(RichTextBox rtb, string txt, Color col)
         {
+            SuspendLayout();
+            RichTextBoxScrollBars temp = rtb.ScrollBars;
+            rtb.ScrollBars = RichTextBoxScrollBars.None;
             rtb.Enabled = false;
             int pos = rtb.TextLength;
             rtb.AppendText(txt);
@@ -761,6 +766,8 @@ namespace UniversalTCPClient
                 rtb.ScrollToCaret();
             }
             rtb.Enabled = true;
+            rtb.ScrollBars = temp;
+            ResumeLayout();
         }
 
         #endregion RichTextBox utils
