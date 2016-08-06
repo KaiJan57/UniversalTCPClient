@@ -226,7 +226,7 @@
             0,
             0,
             0});
-            this.numericUpDownIPScanTimeout.Enter += new System.EventHandler(this.numericUpDownIPScanTimeout_Enter);
+            this.numericUpDownIPScanTimeout.Enter += new System.EventHandler(this.numericUpDown_Enter);
             // 
             // numericUpDownScanIPAttempts
             // 
@@ -251,6 +251,7 @@
             0,
             0,
             0});
+            this.numericUpDownScanIPAttempts.Enter += new System.EventHandler(this.numericUpDown_Enter);
             // 
             // labelTimeout1
             // 
@@ -490,6 +491,7 @@
             0,
             0});
             this.numericUpDownMinPort.ValueChanged += new System.EventHandler(this.numericUpDownMinPort_ValueChanged);
+            this.numericUpDownMinPort.Enter += new System.EventHandler(this.numericUpDown_Enter);
             // 
             // infoProgressBarPortScanner
             // 
@@ -530,7 +532,7 @@
             0,
             0,
             0});
-            this.numericUpDownPortScanTimeout.Enter += new System.EventHandler(this.numericUpDownPortScanTimeout_Enter);
+            this.numericUpDownPortScanTimeout.Enter += new System.EventHandler(this.numericUpDown_Enter);
             // 
             // labelTimeout2
             // 
@@ -639,6 +641,7 @@
             0,
             0});
             this.numericUpDownMaxPort.ValueChanged += new System.EventHandler(this.numericUpDownMaxPort_ValueChanged);
+            this.numericUpDownMaxPort.Enter += new System.EventHandler(this.numericUpDown_Enter);
             // 
             // labelMaxPort
             // 
@@ -909,7 +912,7 @@
             0,
             0,
             0});
-            this.numericUpDownPortConnect.Enter += new System.EventHandler(this.numericUpDownPortConnect_Enter);
+            this.numericUpDownPortConnect.Enter += new System.EventHandler(this.numericUpDown_Enter);
             // 
             // hostTextBoxHostConnect
             // 

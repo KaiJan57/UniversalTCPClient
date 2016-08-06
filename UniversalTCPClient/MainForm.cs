@@ -171,13 +171,29 @@ namespace UniversalTCPClient
             comboBoxLineending.SelectedIndex = LineEndingIndex;
             comboBoxEncoding.SelectedIndex = EncodingIndex;
         }
+        private void numericUpDown_Enter(object sender, EventArgs e)
+        {
+            int next = 1;
+            foreach (Control c in ((Control)sender).Parent.Controls)
+            {
+                if (c.TabIndex == ((Control)sender).TabIndex + next)
+                {
+                    if (c is Label)
+                    {
+                        next++;
+                        continue;
+                    }
+                    if (c is Button)
+                    {
+                        AcceptButton = (Button)c;
+                    }
+                    break;
+                }
+            }
+            ((NumericUpDown)sender).Select(0, ((NumericUpDown)sender).Text.Length);
+        }
 
         #region Actual Client
-        private void numericUpDownPortConnect_Enter(object sender, EventArgs e)
-        {
-            AcceptButton = buttonConnect;
-            numericUpDownPortConnect.Select(0, numericUpDownPortConnect.Text.Length);
-        }
 
         private void textBoxSend_Enter(object sender, EventArgs e)
         {
@@ -337,16 +353,20 @@ namespace UniversalTCPClient
         private async void Disconnect()
         {
             disconnecting = true;
-            while (!CThread.IsAlive)
+            try
             {
-                await Task.Delay(10);
+                while (!CThread.IsAlive)
+                {
+                    await Task.Delay(10);
+                }
+                if (client.Connected)
+                {
+                    client.Shutdown(SocketShutdown.Both);
+                    client.Disconnect(false);
+                    client.Close();
+                }
             }
-            if (client.Connected)
-            {
-                client.Shutdown(SocketShutdown.Both);
-                client.Disconnect(false);
-                client.Close();
-            }
+            catch { }
             EnableClientControls(false);
             connectButtonState = ConnectButtonState.WouldConnect;
             buttonConnect.Text = strings.MainForm_Button_Connect_Connect;
@@ -399,11 +419,6 @@ namespace UniversalTCPClient
 
         #region IP-Scanner
         List<IPAddress> Range = new List<IPAddress>();
-
-        private void numericUpDownIPScanTimeout_Enter(object sender, EventArgs e)
-        {
-            AcceptButton = buttonIPScan;
-        }
 
         private void buttonIPScan_Click(object sender, EventArgs e)
         {
@@ -550,10 +565,6 @@ namespace UniversalTCPClient
         #endregion IP-Scanner
 
         #region Port-Scanner
-        private void numericUpDownPortScanTimeout_Enter(object sender, EventArgs e)
-        {
-            AcceptButton = buttonPortScan;
-        }
 
         private void buttonPortScan_Click(object sender, EventArgs e)
         {

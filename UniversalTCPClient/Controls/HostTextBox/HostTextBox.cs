@@ -66,6 +66,12 @@ namespace UniversalTCPClient.Controls
             ACheck.Start();
         }
 
+        protected override void OnGotFocus(EventArgs e)
+        {
+            base.OnGotFocus(e);
+            SelectAll();
+        }
+
 
         private void checkHost()
         {
@@ -79,6 +85,20 @@ namespace UniversalTCPClient.Controls
                     {
                         if (IPAddress.TryParse(Text, out ipaddress))
                         {
+                            if (newestThreadID != Thread.CurrentThread.ManagedThreadId)
+                            {
+                                return;
+                            }
+                            args.ValidationChangeType = ValidationStateType.ValidIP;
+                            if (valid != ValidationStateType.ValidIP)
+                            {
+                                OnIPValidChanged(args);
+                            }
+                            return;
+                        }
+                        if (Text.ToLower() == "localhost")
+                        {
+                            ipaddress = new IPAddress(new byte[] { 127, 0, 0, 1 });
                             if (newestThreadID != Thread.CurrentThread.ManagedThreadId)
                             {
                                 return;
