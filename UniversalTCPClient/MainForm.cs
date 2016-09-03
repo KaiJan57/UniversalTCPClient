@@ -612,23 +612,71 @@ namespace UniversalTCPClient
 
                 using (TcpClient tcp = new TcpClient())
                 {
-                    IAsyncResult ar = tcp.BeginConnect(PortScanIP.ToString(), port, null, null);
-                    using (ar.AsyncWaitHandle)
+                    try
                     {
-                        if (ar.AsyncWaitHandle.WaitOne((int)numericUpDownPortScanTimeout.Value, false))
+                        IAsyncResult ar = tcp.BeginConnect(PortScanIP, port, null, null);
+                        using (ar.AsyncWaitHandle)
                         {
-                            try
+                            if (ar.AsyncWaitHandle.WaitOne((int)numericUpDownPortScanTimeout.Value, false))
                             {
-                                tcp.EndConnect(ar);
-                                PortScanItem item = new PortScanItem(PortScanIP.ToString(), hostTextBoxPortScanHost.Text, port);
-                                AddPort(item);
+                                try
+                                {
+                                    tcp.EndConnect(ar);
+                                    PortScanItem item = new PortScanItem(PortScanIP.ToString(), hostTextBoxPortScanHost.Text, port);
+                                    AddPort(item);
+                                }
+                                catch
+                                {
+                                }
                             }
-                            catch
+                            else
                             {
                             }
                         }
+                    }
+                    catch
+                    {
+                        string Lang = "";
+                        int index = 0;
+                        Invoke((MethodInvoker)(() => index = comboBoxLanguage.SelectedIndex));
+                        switch (index)
+                        {
+                            case 0:
+                                {
+                                    Lang = "auto";
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    Lang = "en";
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    Lang = "de";
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    Lang = "zh-CN";
+                                    break;
+                                }
+                        }
+                        if (Lang == null || Lang.ToLower() == "auto")
+                        {
+                            Thread.CurrentThread.CurrentUICulture = new CultureInfo(CultureInfo.InstalledUICulture.TwoLetterISOLanguageName);
+                        }
                         else
                         {
+                            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Lang);
+                        }
+                        if (MessageBox.Show(strings.MessageBox_Error_Scan, strings.MessageBox_Error, MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            break;
                         }
                     }
                 }

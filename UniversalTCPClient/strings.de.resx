@@ -237,4 +237,7 @@
   <data name="MainForm_ContextMenuStrip_Clear" xml:space="preserve">
     <value>Log leeren</value>
   </data>
+  <data name="MessageBox_Error_Scan" xml:space="preserve">
+    <value>Protokoll wird nicht unterstützt.</value>
+  </data>
 </root>

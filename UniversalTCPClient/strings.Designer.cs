@@ -419,5 +419,14 @@ namespace UniversalTCPClient {
                 return ResourceManager.GetString("MessageBox_Error_ConnectionLost", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Protocol not supported. ähnelt.
+        /// </summary>
+        internal static string MessageBox_Error_Scan {
+            get {
+                return ResourceManager.GetString("MessageBox_Error_Scan", resourceCulture);
+            }
+        }
     }
 }
