@@ -226,7 +226,7 @@
             0,
             0,
             0});
-            this.numericUpDownIPScanTimeout.Enter += new System.EventHandler(this.numericUpDown_Enter);
+            this.numericUpDownIPScanTimeout.Enter += new System.EventHandler(this.Set_AcceptButton);
             // 
             // numericUpDownScanIPAttempts
             // 
@@ -251,7 +251,7 @@
             0,
             0,
             0});
-            this.numericUpDownScanIPAttempts.Enter += new System.EventHandler(this.numericUpDown_Enter);
+            this.numericUpDownScanIPAttempts.Enter += new System.EventHandler(this.Set_AcceptButton);
             // 
             // labelTimeout1
             // 
@@ -288,6 +288,7 @@
             this.ipAddressControlMaxIP.TabIndex = 1;
             this.ipAddressControlMaxIP.Text = "...";
             this.ipAddressControlMaxIP.TextChanged += new System.EventHandler(this.ipAddressControlMaxIP_TextChanged);
+            this.ipAddressControlMaxIP.Enter += new System.EventHandler(this.Set_AcceptButton);
             // 
             // labelMaxIP
             // 
@@ -357,15 +358,14 @@
             this.listViewIPScan.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.IPScanColumnIP,
             this.IPScanColumnHostName});
-            this.listViewIPScan.GridLines = true;
             this.listViewIPScan.Location = new System.Drawing.Point(14, 207);
-            this.listViewIPScan.MultiSelect = false;
             this.listViewIPScan.Name = "listViewIPScan";
             this.listViewIPScan.ShowGroups = false;
             this.listViewIPScan.Size = new System.Drawing.Size(158, 135);
             this.listViewIPScan.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listViewIPScan.TabIndex = 7;
             this.listViewIPScan.UseCompatibleStateImageBehavior = false;
+            this.listViewIPScan.UseExplorerTheme = true;
             this.listViewIPScan.View = System.Windows.Forms.View.Details;
             this.listViewIPScan.VirtualMode = true;
             this.listViewIPScan.SelectionChanged += new System.EventHandler(this.listViewIPScan_SelectionChanged);
@@ -491,7 +491,6 @@
             0,
             0});
             this.numericUpDownMinPort.ValueChanged += new System.EventHandler(this.numericUpDownMinPort_ValueChanged);
-            this.numericUpDownMinPort.Enter += new System.EventHandler(this.numericUpDown_Enter);
             // 
             // infoProgressBarPortScanner
             // 
@@ -532,7 +531,7 @@
             0,
             0,
             0});
-            this.numericUpDownPortScanTimeout.Enter += new System.EventHandler(this.numericUpDown_Enter);
+            this.numericUpDownPortScanTimeout.Enter += new System.EventHandler(this.Set_AcceptButton);
             // 
             // labelTimeout2
             // 
@@ -573,6 +572,7 @@
             this.listViewPortScan.TabIndex = 7;
             this.listViewPortScan.TintSortColumn = true;
             this.listViewPortScan.UseCompatibleStateImageBehavior = false;
+            this.listViewPortScan.UseExplorerTheme = true;
             this.listViewPortScan.View = System.Windows.Forms.View.Details;
             this.listViewPortScan.VirtualMode = true;
             this.listViewPortScan.SelectedIndexChanged += new System.EventHandler(this.listViewPortScan_SelectedIndexChanged);
@@ -641,7 +641,7 @@
             0,
             0});
             this.numericUpDownMaxPort.ValueChanged += new System.EventHandler(this.numericUpDownMaxPort_ValueChanged);
-            this.numericUpDownMaxPort.Enter += new System.EventHandler(this.numericUpDown_Enter);
+            this.numericUpDownMaxPort.Enter += new System.EventHandler(this.Set_AcceptButton);
             // 
             // labelMaxPort
             // 
@@ -912,7 +912,7 @@
             0,
             0,
             0});
-            this.numericUpDownPortConnect.Enter += new System.EventHandler(this.numericUpDown_Enter);
+            this.numericUpDownPortConnect.Enter += new System.EventHandler(this.Set_AcceptButton);
             // 
             // hostTextBoxHostConnect
             // 

@@ -173,26 +173,29 @@ namespace UniversalTCPClient
             comboBoxEncoding.SelectedIndex = EncodingIndex;
             ResumeLayout();
         }
-        private void numericUpDown_Enter(object sender, EventArgs e)
+        private void Set_AcceptButton(object sender, EventArgs e)
         {
             int next = 1;
             foreach (Control c in ((Control)sender).Parent.Controls)
             {
                 if (c.TabIndex == ((Control)sender).TabIndex + next)
                 {
-                    if (c is Label)
-                    {
-                        next++;
-                        continue;
-                    }
                     if (c is Button)
                     {
                         AcceptButton = (Button)c;
                     }
+                    else
+                    {
+                        next++;
+                        continue;
+                    }
                     break;
                 }
             }
-            ((NumericUpDown)sender).Select(0, ((NumericUpDown)sender).Text.Length);
+            if (sender.GetType() == typeof(NumericUpDown))
+            {
+                ((NumericUpDown)sender).Select(0, ((NumericUpDown)sender).Text.Length);
+            }
         }
 
         #region Actual Client
@@ -837,11 +840,13 @@ namespace UniversalTCPClient
             Disconnect();
             Program.Exit = true;
             Application.Exit();
+            /*
             try
             {
                 Environment.Exit(0);
             }
             catch {}
+            causing problems*/
         }
         #endregion Cleanup on close
     }

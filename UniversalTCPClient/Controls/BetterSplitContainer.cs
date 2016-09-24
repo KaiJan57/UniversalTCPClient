@@ -23,10 +23,6 @@ namespace UniversalTCPClient.Controls
             }
         }
 
-        protected override void OnEnter(EventArgs e)
-        {
-        }
-
         protected override void OnMouseDown(MouseEventArgs e)
         {
             if (!issplitterfixed)
@@ -40,8 +36,8 @@ namespace UniversalTCPClient.Controls
             if (!issplitterfixed)
             {
                 base.IsSplitterFixed = false;
-                Panel1.Refresh();
-                Panel2.Refresh();
+                //Panel1.Refresh();
+                //Panel2.Refresh();
             }
         }
 
